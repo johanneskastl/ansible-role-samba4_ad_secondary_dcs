@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: 'samba4_ad_secondary_dcs'
+  author: 'Johannes Kastl'
+  description: 'Configure secondary and read-only DC for a Samba4 AD'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - 10
+
+  galaxy_tags: []
+
+dependencies: []
