@@ -1,0 +1,16 @@
+---
+# samba4_ad_secondary_dcs/tasks/main.yml
+
+- name: "Load variables"
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "vars_{{ ansible_distribution }}.yml"
+    - "vars_{{ ansible_os_family }}.yml"
+
+- name: 'Create /etc/samba/rsync.pass'
+  template:
+    src: 'etc_samba_rsync_pass.j2'
+    dest: '/etc/samba/rsync.pass'
+    owner: 'root'
+    group: 'root'
+    mode: '0600'
