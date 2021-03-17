@@ -1,0 +1,4 @@
+---
+# samba4_ad_secondary_dcs/vars/vars_Debian.yml
+
+path_to_sysvol: '/var/lib/samba/sysvol/'
