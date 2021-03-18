@@ -14,3 +14,25 @@
     owner: 'root'
     group: 'root'
     mode: '0600'
+
+- name: 'Create systemd service for samba4_sysvol_replication'
+  template:
+    src: 'etc_systemd_system_samba4_sysvol_replication.service.j2'
+    dest: '/etc/systemd/system/samba4_sysvol_replication.service'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify:
+    - 'Trigger systemctl daemon-reload'
+    - 'Enable and start the samba4_sysvol_replication.timer'
+
+- name: 'Create systemd timer for samba4_sysvol_replication'
+  template:
+    src: 'etc_systemd_system_samba4_sysvol_replication.timer.j2'
+    dest: '/etc/systemd/system/samba4_sysvol_replication.timer'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify:
+    - 'Trigger systemctl daemon-reload'
+    - 'Enable and start the samba4_sysvol_replication.timer'
