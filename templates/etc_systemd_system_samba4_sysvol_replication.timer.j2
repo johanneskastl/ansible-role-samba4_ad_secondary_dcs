@@ -1,0 +1,11 @@
+#
+# {{ ansible_managed }}
+#
+[Unit]
+Description=Timer for Samba4 sysvol replication
+
+[Timer]
+OnCalendar=*:0/5
+
+[Install]
+WantedBy=timers.target
