@@ -1,0 +1,14 @@
+#
+# {{ ansible_managed }}
+#
+
+[Unit]
+Description=Samba4 Sysvol Replication
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rsync -XAavz --delete-after --password-file=/etc/samba/rsync.pass rsync://{{ sysvol_replication_user }}@{{ replication_source_server }}/sysvol/ {{ path_to_sysvol }}
+
+[Install]
+WantedBy=multi-user.target
