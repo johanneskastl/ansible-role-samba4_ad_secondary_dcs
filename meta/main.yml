@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: 'samba4_ad_secondary_dcs'
+  namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: 'Configure secondary and read-only DC for a Samba4 AD'
   company: 'B1 Systems GmbH'
