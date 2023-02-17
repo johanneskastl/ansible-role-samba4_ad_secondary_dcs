@@ -25,7 +25,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: 'johanneskastl.samba4_ad_secondary_dcs' }
+         - role: 'johanneskastl.samba4_ad_secondary_dcs'
 
 License
 -------
