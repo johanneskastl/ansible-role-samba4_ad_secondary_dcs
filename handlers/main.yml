@@ -2,7 +2,7 @@
 # samba4_ad_secondary_dcs/handlers/main.yml
 
 - name: 'Restart samba4_sysvol_replication.timer'
-  service:
+  ansible.builtin.service:
     name: 'samba4_sysvol_replication.timer'
     state: 'restarted'
 
@@ -11,7 +11,7 @@
     daemon_reload: 'yes'
 
 - name: 'Enable and start the samba4_sysvol_replication.timer'
-  service:
+  ansible.builtin.service:
     name: 'samba4_sysvol_replication.timer'
     state: 'started'
-    enabled: 'true' 
+    enabled: 'true'
