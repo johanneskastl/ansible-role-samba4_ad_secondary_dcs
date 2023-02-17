@@ -13,7 +13,7 @@ None.
 Role Variables
 --------------
 
-None.
+TBD.
 
 Dependencies
 ------------
@@ -26,6 +26,7 @@ Example Playbook
     - hosts: servers
       roles:
          - role: 'johanneskastl.samba4_ad_secondary_dcs'
+           [... to be added...]
 
 License
 -------
